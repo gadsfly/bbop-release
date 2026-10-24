@@ -1,0 +1,23 @@
+# Versions used to validate this release (Python 3.9, Linux).
+#   conda env create -f environment.yml
+#   conda activate bbop
+#   pip install -e .
+name: bbop
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - numpy=1.26.4
+  - scipy=1.13.1
+  - pandas=2.2.3
+  - xarray=2024.7.0
+  - netcdf4=1.7.2
+  - matplotlib=3.9.3
+  - py-opencv=4.10.0
+  - imageio=2.36.1
+  - imageio-ffmpeg=0.4.9
+  - ffmpeg
+  - tqdm=4.67.1
+  - jupyterlab
+  - ipykernel
+  - pip

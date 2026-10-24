@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bbop"
+version = "1.0.0"
+description = "Loading, synchronization, projection, and visualization code for the BBOP six-camera 3D pose and miniscope calcium dataset."
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.26.0",
+    "scipy>=1.13.0",
+    "pandas>=2.2.0",
+    "xarray>=2024.7.0",
+    "netCDF4>=1.7.0",
+    "matplotlib>=3.9.0",
+    "opencv-python>=4.10.0",  # py-opencv in conda
+    "imageio>=2.36.0",
+    "imageio-ffmpeg>=0.4.9",
+    "tqdm>=4.67.0",
+]
+
+[project.optional-dependencies]
+notebook = [
+    "jupyterlab>=4.1.0",
+    "ipykernel",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["utlis*"]
